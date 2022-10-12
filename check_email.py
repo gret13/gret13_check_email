@@ -1,8 +1,8 @@
 def check_email(email):
-    if '@yandex' and not '@yandex.team' in email.lower():
-        return email.lower().replace('@yandex', '@ya')
-    else:
-        return email.lower()
+    emali_lower = email.lower()
+    if '@yandex' and not '@yandex-team' in emali_lower:
+        return emali_lower.replace('@yandex', '@ya')
+    emali_lower
 
 
 def main():
