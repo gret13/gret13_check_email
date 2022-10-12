@@ -1,15 +1,11 @@
 def check_email(email):
-    if '@yandex' and not '@yandex.team' in email.lower():
-        return email.lower().replace('@yandex', '@ya')
-    else:
-        return email.lower()
+    email_lower = email.lower()
+    if '@yandex' and not '@yandex-team' in email_lower:
+        email_lower.replace('@yandex', '@ya')
+        return email_lower
 
 
-def main():
-    email_list = ['mail_1@Yandex.ru', 'mail_2@Ya.ru', 'mail_3@Yandex.team.ru', 'mail_4@Yandex.com']
-    for value in email_list:
-        print(check_email(value))
-
-
-if __name__ == '__main__':
-    main()
+assert check_email('m1@Yandex.ru') == 
+'m1@ya.ru'
+assert check_email('m1@Yandex-team.ru') == 
+'m1@yandex-team.ru.ru'
